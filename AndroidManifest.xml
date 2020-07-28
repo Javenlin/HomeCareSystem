@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.osiog.homecaresystem">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_SMS" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- FIRST_ACTIVITY -->
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- OTHER_ACTIVITY -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme" />
+        <!-- ====================================================================== -->
+        <activity
+            android:name=".AlarmActivity.MainClock"
+            android:label="鬧鈴主畫面" />
+        <activity
+            android:name=".AlarmActivity.PagerClock"
+            android:label="歷史紀錄畫面" />
+
+        <!-- ======================================================================= -->
+        <activity
+            android:name=".AlarmActivity.AddClock"
+            android:label="新增鬧鈴畫面"
+            android:parentActivityName="AlarmActivity.MainClock">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="AlarmActivity.MainClock" />
+        </activity>
+        <!-- ======================================================================= -->
+        <activity
+            android:name=".AlarmActivity.EditClock"
+            android:label="編輯鬧鈴畫面" />
+
+        <!-- ======================================================================= -->
+        <activity
+            android:name=".AlarmActivity.AlertActivity"
+            android:label="鬧鈴提示畫面">
+            <intent-filter>
+                <action android:name="teamqitalach.pillapp.alertactivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- ======================================================================= -->
+
+
+        <!-- FACEBOOK_LOGIN -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- GOOGLE_LOGIN -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- FACEBOOK_ACCOUNT_SECTION -->
+        <!-- ================================================== -->
+        <meta-data
+            android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <!-- ================================================== -->
+
+    </application>
+
+</manifest>
