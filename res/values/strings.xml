@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HomeCareSystem</string>
+
+    <!--FACEBOOK SECTION-->
+    <string name="facebook_app_id">1263108457163633</string>
+    <string name="fb_login_protocol_scheme">fb1263108457163633</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">c49642e808a195d46ac7dbf8c0bbc30d</string>
+    <!--c49642e808a195d46ac7dbf8c0bbc30d-->
+    <!--WEEKDAYS SECTION-->
+    <string name="Monday">一</string>
+    <string name="Tuesday">二</string>
+    <string name="Wednesday">三</string>
+    <string name="Thursday">四</string>
+    <string name="Friday">五</string>
+    <string name="Saturday">六</string>
+    <string name="Sunday">日</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

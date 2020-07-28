@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFCC"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/et_Item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="診所/藥名/運動"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:text="時間"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="重複"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="項目"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#006393"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <!--<View-->
+        <!--android:id="@+id/view1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:background="#006393"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:layout_constraintVertical_bias="0.889" />-->
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginStart="16dp"-->
+        <!--android:layout_marginTop="28dp"-->
+        <!--android:text="服用日數"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="?android:attr/colorPrimaryDark"-->
+        <!--android:textSize="22sp"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/et_days"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/view3" />-->
+
+
+    <CheckBox
+        android:id="@+id/every_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="244dp"
+        android:layout_toEndOf="@+id/btn_GoCamera"
+        android:onClick="onCheckboxClicked"
+        android:text="每天  "
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkbox_layout"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/checkbox_layout"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/every_day"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419">
+
+        <CheckBox
+            android:id="@+id/checkbox_monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignStart="@+id/btn_GoCamera"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="一"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="二"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="三"
+            android:textSize="25sp" />
+
+
+        <CheckBox
+            android:id="@+id/checkbox_thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="四"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="五"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onCheckboxClicked"
+            android:text="六"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/checkbox_sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="onCheckboxClicked"
+            android:text="日"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#006393"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_GoCamera"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/btn_GoPic"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:background="@drawable/home_button2"-->
+        <!--android:text="拍攝項目"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="24sp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/imageView" />-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_width="342dp"-->
+        <!--android:layout_height="202dp"-->
+        <!--android:layout_below="@+id/checkbox_layout"-->
+        <!--android:layout_marginBottom="86dp"-->
+        <!--android:layout_marginRight="32dp"-->
+        <!--android:layout_marginTop="85dp"-->
+        <!--android:layout_toEndOf="@+id/btn_GoCamera"-->
+        <!--android:scaleType="fitXY"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/btn_cancel_alarm"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/every_day"-->
+        <!--app:layout_constraintVertical_bias="1.0"-->
+        <!--app:srcCompat="@android:drawable/ic_menu_camera" />-->
+
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_GoPic"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/imageView"-->
+        <!--android:layout_alignStart="@+id/btn_GoCamera"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:background="@drawable/home_button2"-->
+        <!--android:text="瀏覽圖片"-->
+        <!--android:textColor="#000000"-->
+        <!--android:textSize="24sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/imageView"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent" />-->
+
+
+    <Button
+        android:id="@+id/btn_cancel_alarm"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/home_button2"
+        android:text="追加鬧鈴"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_set_alarm"
+        app:layout_constraintEnd_toStartOf="@+id/btn_set_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_set_alarm" />
+
+
+    <Button
+        android:id="@+id/btn_set_alarm"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/home_button2"
+        android:text="修改鬧鈴"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <!--<EditText-->
+        <!--android:id="@+id/et_days"-->
+        <!--android:layout_width="102dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="188dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:ems="10"-->
+        <!--android:hint="由本日算起"-->
+        <!--android:inputType="textPersonName"-->
+        <!--android:textAlignment="center"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/view2"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/view3"-->
+        <!--app:layout_constraintVertical_bias="0.104" />-->
+
+
+    <TextView
+        android:id="@+id/tv_AddTime"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="132dp"
+        android:fontFamily="monospace"
+        android:text="12:00 AM"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_purple"
+        android:textSize="27sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--app:layout_constraintStart_toEndOf="@+id/btn_AddTime"-->
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

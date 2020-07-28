@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.osiog.homecaresystem.LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/LL_loginInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/img_Avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:id="@+id/txt_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_Avatar"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="FacebookID" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_Avatar"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="UserName" />
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_Avatar"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="GoogleEmail" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp">
+
+        <!--FBLOGIN_SECTION-->
+
+        <!--FB原生按鈕-->
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btn_FB_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="FACEBOOK"
+            android:visibility="gone" />
+
+        <!--FB客製按鈕-->
+        <ImageView
+            android:id="@+id/btn_FB_login_skin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/com_facebook_favicon_blue"
+            android:onClick="FACEBOOK"
+            android:tooltipText="臉書登入" />
+
+        <!--我是分隔線-->
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+
+        <!--GOOGLELOGIN_SECTION-->
+
+        <!--GOOGLE原生按鈕-->
+        <!--&lt;!&ndash;登入&ndash;&gt;-->
+        <!--<com.google.android.gms.common.SignInButton-->
+            <!--android:id="@+id/btn_GOOGLE_login"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:onClick="GOOGLE"  />-->
+
+
+        <!--GOOGLE客製按鈕-->
+        <!--登入-->
+        <ImageView
+            android:id="@+id/btn_GOOGLE_login_skin"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/googleg_standard_color_18"
+            android:tooltipText="谷歌登入" />
+        <!--登出-->
+        <ImageView
+            android:id="@+id/btn_GOOGLE_logout"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/googleg_disabled_color_18"
+            android:visibility="gone"
+            android:onClick="GOOGLE" />
+
+        <!--我是分隔線-->
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/btn_PHONE_login"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_phone_iphone_black_24dp"
+            android:tooltipText="谷歌登入" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
